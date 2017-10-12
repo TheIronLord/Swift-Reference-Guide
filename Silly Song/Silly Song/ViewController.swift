@@ -13,6 +13,7 @@ func shortNameFromName(name: String) -> String {
     var result: String = ""
     
     var addRest: Bool = false;
+    
     for shortName in lowercase{
         if addRest{
             result.append(shortName)
@@ -26,6 +27,7 @@ func shortNameFromName(name: String) -> String {
 }
 
 func lyricsForName(lyricsTemplate: String, FullName: String) -> String{
+    // Replace lyrics with name and short name
     let lyrics = lyricsTemplate.replacingOccurrences(of: "<FULL_NAME>", with: FullName)
         .replacingOccurrences(of: "<SHORT_NAME>", with: shortNameFromName(name: FullName))
     
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Get Delegate and assign to nameField
         nameField.delegate = self
     }
 
@@ -47,18 +50,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func reset(_ sender: Any) {
+        //Clear nameField and lyricsView
         nameField.text = ""
         lyricsView.text = ""
     }
     
     @IBAction func displayLyrics(_ sender: Any) {
+        // Unwrap String?
         let shortName = nameField.text!
-        
+        // Get Lyrics and assign to lyricsView
         lyricsView.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, FullName: shortName)
     }
     
 }
 
+//Create Delegate to handle the return button
 extension ViewController : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
