@@ -1,2 +1,6 @@
 # iOS-Reference-Guide
-Reference Guide for iOS
+## Current Projects
+* Silly Song Project
+
+## Current Swift Code
+* Functions
