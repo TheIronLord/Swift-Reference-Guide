@@ -4,3 +4,4 @@
 
 ## Current Swift Code
 * Functions
+* Strings
