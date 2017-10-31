@@ -14,3 +14,6 @@ your computer
 ## Contact Information
 If you are having any trouble downloading or running the playground files please  
 email me at sajjadp92@outlook.com
+
+## Contributors
+thelegion92 (sajjadp92@outlook.com)
