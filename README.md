@@ -1,4 +1,4 @@
-# iOS-Reference-Guide
+# SRGReadme
 This repository has reference code for swift
 
 ## Functions
