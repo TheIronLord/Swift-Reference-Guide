@@ -49,4 +49,13 @@ d.say("Woof")
 d.say("Woof", times:3)
 
 //Variadic Parameters
+func sayStrings(_ arrayOfStrings:String ...){
+    for s in arrayOfStrings{
+        print(s)
+    }
+}
+sayStrings("hey", "ho")
 
+print("Manny", 3, true)
+print("Manny", "Moe", separator:", ", terminator:", ")
+print("Jack")
