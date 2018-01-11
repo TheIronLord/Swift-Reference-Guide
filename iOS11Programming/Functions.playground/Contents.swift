@@ -124,3 +124,72 @@ print(dM.name)
 changeName(of:dM, to:"Rover")
 print(dM.name)
 
+//Recursion
+func countDownFrom(_ ix:Int){
+    print(ix)
+    if ix > 0{
+        countDownFrom(ix - 1)
+    }
+}
+countDownFrom(5)
+
+//Function As Value
+func doThis(_ f:()->()){
+    f()
+}
+func whatToDo(){
+    print("I did it")
+}
+doThis(whatToDo)
+
+//Anonymous Functions
+func doThisAnon(){
+    doThis({
+        () in
+        print("Hello")
+    })
+}
+doThisAnon()
+
+//Trailing Function
+func doThisTrail(_ f:()->()){
+    f()
+}
+doThisTrail{
+    print("Howdy")
+}
+doThisTrail(whatToDo)
+
+func greeting() -> String{
+    return "Howdy"
+}
+func performedAndPrint(_ f:()->String){
+    let s = f()
+    print(s)
+}
+performedAndPrint{
+    greeting()
+}
+
+let arr = [2, 4, 6, 8]
+let arr2 = arr.map({
+    (i:Int) -> Int in
+    return i * 2
+})
+
+let arr3 = arr.map {$0*2}
+
+//Closure
+class DogClosure{
+    var whatThisDogSays = "woof"
+    func bark(){
+        print(self.whatThisDogSays)
+    }
+}
+func doThisClosure(_ f:()->()){
+    f()
+}
+let dClosure = DogClosure()
+let barkFunction = dClosure.bark
+dClosure.whatThisDogSays = "arf"
+doThis(barkFunction)
