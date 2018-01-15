@@ -193,3 +193,15 @@ let dClosure = DogClosure()
 let barkFunction = dClosure.bark
 dClosure.whatThisDogSays = "arf"
 doThis(barkFunction)
+
+//Closure setting a Captured Variable
+func pass100(_ f:(Int)->()){
+    f(100);
+}
+var x = 0;
+print(x);
+func setX(newX:Int){
+    x = newX;
+}
+pass100(setX);
+print(x);
