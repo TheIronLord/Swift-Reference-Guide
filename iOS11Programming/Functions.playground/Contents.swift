@@ -205,3 +205,36 @@ func setX(newX:Int){
 }
 pass100(setX);
 print(x);
+
+//Closure Preserving its Captured Environment
+func countAdder(_ f: @escaping () -> ()) -> () -> (){
+    var ct = 0;
+    return {
+        ct = ct + 1;
+        print("count is \(ct)");
+        f();
+    }
+}
+func greet(){
+    print("howdy");
+}
+let countedGreet = countAdder(greet);
+countedGreet();
+countedGreet();
+countedGreet();
+
+//Function Reference and Selectors
+class DogFuncRef{
+    func bark(){
+        
+    }
+    func bark(_ loudly:Bool){
+        
+    }
+    func bark(_ times:Int){
+        
+    }
+    func test(){
+        let barkFunction = bark as (Int) -> ()
+    }
+}
