@@ -15,5 +15,7 @@ your computer
 If you are having any trouble downloading or running the playground files please  
 email me at sajjadp92@outlook.com
 
+## References
+* O Reilly iOS 11 Programming Fundamentals with Swift by Matt Neuburg
 ## Contributors
 TheIronLord (sajjadp92@outlook.com)
