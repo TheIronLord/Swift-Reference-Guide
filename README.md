@@ -1,6 +1,11 @@
 # SRGReadme
 This repository has reference code for swift
 
+# Pluralsight Tutorials
+## Swift 3 Fundamentals
+![Piece By Piece](Images/PieceByPiece.png)
+
+# O Reilly iOS 11 Programming Fundamentals with Swift by Matt Neuburg
 ## Functions
 ![Functions](Images/FunctionsPractice.png)
 
